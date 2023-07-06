@@ -3,14 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>Manip@Syntaxe Demo</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <style>
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 26px;
+  background-color: #FFFFFC;
+}
+h1 {
+    text-align: center;
+      font-family: Oswald, sans-serif;
+  font-size: 46px;
+}
+p {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
 table {
-  border-collapse: collapse;
   border-spacing: 0;
   width: 50%;
   border: 1px solid #ddd;
+  border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+td a {
+    display: block;
 }
 
 th, td {
@@ -18,21 +40,28 @@ th, td {
   padding: 16px;
 }
 
+tr:hover {
+    background-color: #FFFFF0;
+}
+
 tr:nth-child(even) {
   background-color: #f2f2f2;
+}
+tr:nth-child(even):hover {
+    background-color: #f2f2e7;
 }
 </style>
 </head>
 <body>
     <h1>Manip@Syntaxe Demo</h1>
-    <p id="consigne">Choisissez quelle démo vous voulez utiliser.</p>
+    <p id="consigne">Choisissez quelle démo vous voulez utiliser en cliquant sur l'un des liens ci-dessous.</p>
     <table id="liste-demos">
         <tr>
             <th>Numéro de version</th>
             <th>Date de publication</th>
             <th>Commentaire</th>
         </tr>
-    {{ }}
+        {{ }}
     </table>
 </body>
 </html>
