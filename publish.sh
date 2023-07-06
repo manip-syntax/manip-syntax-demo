@@ -19,6 +19,12 @@ commentaire=$2
 cd ..
 npm run build
 
+if [[ $? -ne 0 ]]; then
+    print Echec de compilation
+    cd demo
+    exit 1
+fi
+
 # déplacement du dossier de build
 mv dist demo/$version
 
@@ -31,7 +37,7 @@ python -c "import publish_helper as p; p.produit_index()"
 
 # enregistrement dans git 
 git add $version/*
-git commit -am $commentaire
+git commit $version/* index.html versions.csv -m $commentaire
 git tag -a $version -m $commentaire
 
 # push
