@@ -42,3 +42,4 @@ git tag -a $version -m $commentaire
 
 # push
 git push -u origin master
+git push origin $version
