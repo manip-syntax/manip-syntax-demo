@@ -32,10 +32,7 @@ tr:nth-child(even) {
             <th>Date de publication</th>
             <th>Commentaire</th>
         </tr>
-    <tr><td><a href="v0.0.0/index.html">v0.0.0</a></td>
-                         <td><a href="v0.0.0/index.html">22/04/2023</a></td>
-                         <td><a href="v0.0.0/index.html">Premier essai</a></td>
-                     </tr>
+    {{ }}
     </table>
 </body>
 </html>
