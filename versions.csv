@@ -1,3 +1,4 @@
 "v0.0.0","22/04/2023","Premier essai"
 "v0.1.0","06/07/2023","Amélioration de la sélection des mots. Seules les fonctions enregistrées pour une phrase sont soumises à l'élève"
 "v0.1.1","06/07/2023","Correction d'un bogue dans les chemins d'accès"
+"v0.1.2","07/07/2023","Correction d'un bogue : les fonctions non utilisées étaient malgré tout demandées lors de l'analyse"
