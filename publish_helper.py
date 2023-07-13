@@ -2,6 +2,7 @@
 pour déléguer les tâches trop complexes en zsh"""
 
 import csv
+import os
 
 def remplit_tableau():
     """Remplit un tableau html à partir des données
@@ -31,6 +32,19 @@ def produit_index():
     index = template.replace("{{ }}",tableau)
     with open("index.html",'w') as f:
         f.write(index)
+
+def ajout_version(version: str):
+    """Ajoute le numéro de version à différents endroits"""
+    folder = f"{version}/assets/"
+    for fichier in os.listdir(folder):
+        chemin = folder + fichier
+        with open(chemin,'r') as f:
+            ntexte = f.read().replace("{{numéro_de_version}}",version)
+        with open(chemin, 'w') as f:
+            f.write(ntexte)
+
+
+    
 
 
 
