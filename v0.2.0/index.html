@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manip@Syntaxe</title>
+    <script type="module" crossorigin src="./assets/index-05690494.js"></script>
+    <link rel="stylesheet" href="./assets/index-6ec0ca3e.css">
+  </head>
+  <body>
+    <div class="grid-container">
+        <div class="header">
+            <a href=".." title="Page d'accueil"><h1>Manip@Syntaxe</h1></a>
+            <h2 id="nouvelle_phrase">Nouvelle phrase</h2>
+            <h2 id="analyse_fichier">Charger une phrase depuis un fichier</h2>
+        </div>
+        <div class="gauche">
+            <div id="nouvelle_phrase-fonctions-div">
+                <select id="nouvelle_phrase-fonctions-selection" name="nouvelle_phrase-fonctions-selection" style="display: none;">
+                </select>
+            </div>
+        </div>
+
+        <div class="central">
+            <div class="consigne" id="consigne-container">Consigne</div>
+            <div class="phrase" id="phrase-analyse">
+                <p class="phrase-analyse-paragraphe" id="phrase-analyse-paragraphe">
+                </p>
+            </div>
+            <div class="boutons" id="boutons-analyse">
+                <button id="bouton-valider" class="bouton boutons-analyse-valider" type="button">Valider</button>
+                <button id="bouton-valider-phrase" class="bouton boutons-valider-phrase" type="button" style="display: none;">Valider la phrase</button>
+            </div>
+            <div class=" modal modal-choix-phrase" id="modal-choix-phrase">
+                <div class="modal-contenu modal-choix-phrase-contenu" id="modal-choix-phrase-contenu">
+                    <h2>Sélectionne une phrase dans la liste suivante</h2>
+                    <ul id="modal-choix-phrase-liste">
+                    </ul>
+                </div>
+            </div>
+            <div class="modal modal-message" id="modal-message">
+                <div class="modal-contenu modal-message-contenu" id="modal-message-contenu">
+                    <p class="modal-message-contenu-texte" id="modal-message-contenu-texte"></p>
+                    <button id="modal-message-bouton" type="button" class="bouton modal-message-bouton">OK</button>
+                </div>
+            </div>
+            <div class="modal modal-nouvelle-phrase" id="modal-nouvelle-phrase">
+                <div class="modal-contenu modal-nouvelle-phrase-contenu" id="modal-nouvelle-phrase-contenu">
+                    <h2>Nouvelle phrase</h2>
+                    <form>
+                        <div>
+                            <label for="nouvelle_phrase" class="modal-message-contenu-texte">Entrez la nouvelle phrase :</label>
+                            <textarea name="nouvelle_phrase" id="nouvelle_phrase-texterea"></textarea>
+                        </div>
+                    </form>
+                    <button id="modal-nouvelle_phrase-bouton" type="button" class="bouton modal-message-bouton">OK</button>
+                </div>
+            </div>
+            <div class="modal modal-analyse-fichier" id="modal-analyse-fichier">
+                <div class="modal-contenu" id="modal-analyse-fichier-contenu">
+                    <h2>Glissez-déposez un fichier ou cliquez dans la zone.</h2>
+                    <div id="analyse_fichier_input_zone">
+                        <input type="file" id="analyse_fichier_input" accept=".json">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="droite">
+            <div id="conseil">
+            </div>
+        </div>
+        <div class="footer">Mentions légales...</div>
+    </div>
+    
+  </body>
+</html>
