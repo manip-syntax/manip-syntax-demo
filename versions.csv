@@ -3,3 +3,4 @@
 "v0.1.1","06/07/2023","Correction d'un bogue dans les chemins d'accès"
 "v0.1.2","07/07/2023","Correction d'un bogue : les fonctions non utilisées étaient malgré tout demandées lors de l'analyse"
 "v0.2.0","21/07/2023","L'utilisateur peut désormais créer de nouvelles phrases et les charger depuis un fichier."
+"v0.2.0","21/07/2023","L'utilisateur peut désormais créer de nouvelles phrases et les charger depuis un fichier."
