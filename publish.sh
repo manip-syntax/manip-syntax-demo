@@ -35,7 +35,7 @@ print "\"$version\",\"$(date +"%d/%m/%Y")\",\"$commentaire\"" >> versions.csv
 # remplissage du tableau et génération du nouvel index.html
 python -c "import publish_helper as p; p.produit_index()"
 # remplissage du numéro de version
-python -c "import publish_helper as p; p.ajout_version($version)"
+python -c "import publish_helper as p; p.ajout_version('$version')"
 
 # enregistrement dans git 
 git add $version/*
