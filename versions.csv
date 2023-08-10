@@ -7,3 +7,4 @@
 "v0.3.0","31/07/2023","L'utilisateur peut désormais intégrer des fonctions enchâssées et des fonctions qu'on peut trouver plus d'une fois dans un groupe donné"
 "v0.3.1","01/08/2023","Un bogue empêchait d'analyser les phrases ne contenant aucun groupe enchâssé"
 "v0.4.0","05/08/2023","Affichage du nom des fonctions et autres améliorations essentiellement visuelles"
+"v0.5.0","10/08/2023","Il est désormais possible de manipuler le sujet. De nouvelles phrases d'exemples ont été rentrées"
