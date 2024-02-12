@@ -35,13 +35,21 @@ def produit_index():
 
 def ajout_version(version: str):
     """Ajoute le numéro de version à différents endroits"""
-    folder = f"{version}/assets/"
-    for fichier in os.listdir(folder):
-        chemin = folder + fichier
-        with open(chemin,'r') as f:
-            ntexte = f.read().replace("{{numéro_de_version}}",version)
-        with open(chemin, 'w') as f:
-            f.write(ntexte)
+    base = f"{version}/"
+    assets = f"{version}/assets/"
+    def __ajout_version(folder):
+        for fichier in os.listdir(folder):
+            chemin = folder + fichier
+            try:
+                with open(chemin,'r') as f:
+                    ntexte = f.read().replace("{{numéro_de_version}}",version)
+            except IsADirectoryError:
+                continue
+            with open(chemin, 'w') as f:
+                f.write(ntexte)
+
+    __ajout_version(base)
+    __ajout_version(assets)
 
 
     
