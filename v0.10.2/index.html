@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald|Noto+Sans">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manip@Syntaxe v0.10.2</title>
+    <script type="module" crossorigin src="./assets/index-8ad0fbe2.js"></script>
+    <link rel="stylesheet" href="./assets/index-f602415c.css">
+  </head>
+  <body>
+    <div class="grid-container">
+        <div class="header">
+            <a href=".." title="Page d'accueil"><h1>Manip@Syntaxe <span class="title_version">v0.10.2</span></h1></a>
+            <h2 id="nouvelle_phrase">Créer une nouvelle phrase</h2>
+            <h2 id="analyse_fichier">Charger une phrase depuis un fichier</h2>
+        </div>
+        <div class="gauche">
+            <div id="nouvelle_phrase-fonctions-div">
+                <div id="nouvelle_phrase-fonctions-selection" name="nouvelle_phrase-fonctions-selection" style="display: none;" class="selecteur">
+                </div>
+            </div>
+        </div>
+
+        <div class="central">
+            <div class="consigne" id="consigne-container">Consigne</div>
+            <div class="phrase" id="phrase-analyse">
+                <p class="phrase-analyse-paragraphe" id="phrase-analyse-paragraphe">
+                </p>
+            </div>
+            <div class="boutons" id="boutons-analyse">
+                <button id="bouton-valider" class="bouton bouton-actif boutons-analyse-valider" type="button">Valider</button>
+                <button id="bouton-valider-phrase" class="bouton bouton-actif boutons-valider-phrase" type="button" style="display: none;">Valider la phrase</button>
+            </div>
+            <div class=" modal modal-choix-phrase" id="modal-choix-phrase">
+                <div class="modal-contenu modal-choix-phrase-contenu" id="modal-choix-phrase-contenu">
+                    <h2>Sélectionne une phrase dans la liste suivante</h2>
+                    <ul id="modal-choix-phrase-liste">
+                    </ul>
+                </div>
+            </div>
+            <div class="modal modal-message" id="modal-message">
+                <div class="modal-contenu modal-message-contenu" id="modal-message-contenu">
+                    <span id="modal-croix" class="modal-croix" hidden >&times;</span>
+                    <p class="modal-message-contenu-texte" id="modal-message-contenu-texte"></p>
+                    <button id="modal-message-bouton" type="button" class="bouton bouton-actif modal-message-bouton">OK</button>
+                </div>
+            </div>
+            <div class="modal modal-nouvelle-phrase" id="modal-nouvelle-phrase">
+                <div class="modal-contenu modal-nouvelle-phrase-contenu" id="modal-nouvelle-phrase-contenu">
+                    <h2>Nouvelle phrase</h2>
+                    <form>
+                        <div>
+                            <label for="nouvelle_phrase" class="modal-message-contenu-texte">Entrez la nouvelle phrase :</label>
+                            <textarea name="nouvelle_phrase" id="nouvelle_phrase-texterea"></textarea>
+                        </div>
+                    </form>
+                    <button id="modal-nouvelle_phrase-bouton" type="button" class="bouton bouton-actif modal-message-bouton">OK</button>
+                </div>
+            </div>
+            <div class="modal modal-analyse-fichier" id="modal-analyse-fichier">
+                <div class="modal-contenu" id="modal-analyse-fichier-contenu">
+                    <h2>Analyse d'un fichier</h2>
+                    <form id="analyse_fichier_input_form" method="post" action="" enctype="multipart/form-data">
+                      <div class="analyse_fichier_input_zone">
+                        <input class="box__file" type="file" name="files[]" id="analyse_fichier_input" accept=".json" >
+                        <label for="analyse_fichier_input"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" viewBox="0 0 20 17"><path d="M10 0l-5.2 4.9h3.3v5.1h3.8v-5.1h3.3l-5.2-4.9zm9.3 11.5l-3.2-2.1h-2l3.4 2.6h-3.5c-.1 0-.2.1-.2.1l-.8 2.3h-6l-.8-2.2c-.1-.1-.1-.2-.2-.2h-3.6l3.4-2.6h-2l-3.2 2.1c-.4.3-.7 1-.6 1.5l.6 3.1c.1.5.7.9 1.2.9h16.3c.6 0 1.1-.4 1.3-.9l.6-3.1c.1-.5-.2-1.2-.7-1.5z"></path></svg> <strong>Choisissez un fichier</strong><span class="box__dragndrop"> ou déposez-le ici</span>.</label>
+                        <button id="analyse_fichier_bouton" class="box__button" type="submit">Charger</button>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal modal-ajout-manipulations" id="modal-ajout-manipulations">
+                <div class="modal-contenu" id="modal-ajout-manipulations-contenu">
+                    <h2 id="modal-ajout-manipulations-titre"></h2>
+                    <form id="ajout-manipulations-form">
+                        <div id="ajout-manipulations-form-contenu">
+                        </div>
+                    <button id="modal-ajout-manipulations-OK" type="submit" class="bouton bouton-actif modal-message-bouton">OK</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal modal-manipulations" id="modal-manipulations">
+                <div class="modal-contenu" id="modal-manipulations-contenu">
+                    <h2 id="modal-manipulations-titre"></h2>
+                    <div id="manipulable-bloc"><h3 id="manipulable" draggable="true"></h3></div>
+                    <div id="manipulations-form">
+                        <div id="manipulations-form-contenu">
+                    </div>
+                    <button id="modal-manipulations-OK" class="bouton bouton-actif boutons-analyse-valider">Valider</button>
+                    <button id="modal-manipulations-annuler" class="bouton bouton-actif boutons-analyse-annuler">Corriger</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="droite">
+            <div id="conseil">
+            </div>
+        </div>
+        <div class="footer">Mentions légales...</div>
+    </div>
+    
+  </body>
+</html>
