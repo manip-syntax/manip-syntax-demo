@@ -19,3 +19,4 @@
 "v0.10.1","21/03/2024","Correction d'un bogue en rapport avec la pronominalation des COI + remplacement des phrases"
 "v0.10.2","22/09/2024","Amélioration du déplacement dans la manipulation des CC ; amélioration de la gestion de la manipulation des pronoms"
 "v0.10.3","24/09/2024","Prise en charge de l'élision dans les manipulations"
+"v0.10.4","02/10/2024","Bogue corrigé : la manipulation des CC ne fait plus planter le programme"
