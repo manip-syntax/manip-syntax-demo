@@ -20,3 +20,4 @@
 "v0.10.2","22/09/2024","Amélioration du déplacement dans la manipulation des CC ; amélioration de la gestion de la manipulation des pronoms"
 "v0.10.3","24/09/2024","Prise en charge de l'élision dans les manipulations"
 "v0.10.4","02/10/2024","Bogue corrigé : la manipulation des CC ne fait plus planter le programme"
+"v0.10.5","13/11/2024","Bogue corrigé : on peut analyser avec une phrase avec attribut du COD"
